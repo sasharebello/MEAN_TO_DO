@@ -1,0 +1,95 @@
+/* Apply the gradient background to the body or main container */
+body {
+    background: linear-gradient(90deg, #8e836d 0%, #3a6098 100%);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ /* General button styles */
+button {
+    background:  #1c2129;
+    color: #8e8e8e;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px; /* Slightly rectangular */
+    margin-right: 10px; /* Spacing between buttons */
+    margin-bottom: 10px; /* Add space between rows of buttons */
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  /* Specific for the checkboxes */
+  /* input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2); /* Make checkboxes a bit larger 
+  } */
+  
+  /* Task text when completed */
+  /* .task-completed {
+    text-decoration: line-through;
+    color: #aaa;
+  } */
+  
+  /* Buttons styled for the new gradient design */
+  /* button {
+    background:  #1c2129;
+    color: #5e5e5e;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  } */
+  
+  /* Button hover effect */
+  button:hover {
+    background: #09293d;
+    color: #fff;
+  }
+  
+/* Checkbox styles */
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Slightly larger checkboxes */
+  }
+  
+  /* Task text when marked as complete */
+  .task-completed {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
+  input[type="text"] {
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  /* Container for logout and input field */
+  div {
+    margin-bottom: 20px;
+  }
+  /* Header and text */
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 4em;
+    margin: 10px 0;
+    color: #555;
+  }
+  
