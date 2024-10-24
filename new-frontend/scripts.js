@@ -1,3 +1,5 @@
+const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000' : 'https://sasha-mean-to-do-joqs9.ondigitalocean.app';
+
 document.getElementById('showLogin').addEventListener('click', () => {
     document.getElementById('loginFormContainer').style.display = 'block';
     document.getElementById('registerFormContainer').style.display = 'none';
@@ -23,7 +25,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     }
 
     try {
-        const response = await fetch('http://localhost:5000/api/register', {
+        const response = await fetch('${API_URL}/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -51,7 +53,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     const password = document.getElementById('loginPassword').value;
 
     try {
-        const response = await fetch('http://localhost:5000/api/login', {
+        const response = await fetch('${API_URL}/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -86,7 +88,7 @@ document.getElementById('add-task-btn').addEventListener('click', async () => {
     }
 
     try {
-        const response = await fetch('http://localhost:5000/api/todo', {
+        const response = await fetch('${API_URL}/api/todo', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -132,7 +134,7 @@ async function fetchTasks() {
     console.log('Fetching tasks with token:', token);  // Check if the token is present
 
     try {
-        const response = await fetch('http://localhost:5000/api/todos', {
+        const response = await fetch('${API_URL}/api/todos', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -188,7 +190,7 @@ async function markTaskComplete(e) {
     const token = localStorage.getItem('token');
     
     try {
-        const response = await fetch(`http://localhost:5000/api/todo/${taskId}/complete`, {
+        const response = await fetch(`${API_URL}/api/todo/${taskId}/complete`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -227,7 +229,7 @@ async function deleteTask(e) {
     const token = localStorage.getItem('token');
 
     try {
-        const response = await fetch(`http://localhost:5000/api/todo/${taskId}`, {
+        const response = await fetch(`${API_URL}/api/todo/${taskId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`,

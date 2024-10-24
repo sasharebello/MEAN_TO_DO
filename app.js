@@ -11,6 +11,9 @@ const app = express();
 //     res.send("hello world!");
 // })
 
+app.use(cors());
+app.use(express.json());
+
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'new-frontend')));
 
@@ -18,8 +21,6 @@ app.get('/', function(request, response) {
     response.sendFile(path.join(__dirname, 'new-frontend', 'index.html'));
 });
 
-app.use(cors());
-app.use(express.json());
 app.use('/api', apiRoutes);
 
 const port = process.env.PORT || 5000;
