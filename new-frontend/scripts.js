@@ -131,7 +131,7 @@ function addTaskToUI(task) {
 
 async function fetchTasks() {
     const token = localStorage.getItem('token');
-    console.log('Fetching tasks with token:', token);  // Check if the token is present
+    // console.log('Fetching tasks with token:', token);  // Check if the token is present
 
     try {
         const response = await fetch('https://sasha-mean-to-do-joqs9.ondigitalocean.app/api/todos', {
@@ -142,10 +142,10 @@ async function fetchTasks() {
             }
         });
 
-        console.log('Response status:', response.status);  // Log the response status
+        // console.log('Response status:', response.status);  // Log the response status
         if (response.ok) {
             const tasks = await response.json();
-            console.log('Tasks fetched:', tasks);  // Log the fetched tasks
+            // console.log('Tasks fetched:', tasks);  // Log the fetched tasks
             displayTasks(tasks);
         } else {
             const errorData = await response.json();
