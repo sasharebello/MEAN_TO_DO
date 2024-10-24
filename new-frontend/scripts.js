@@ -1,4 +1,4 @@
-const API_URL = 'https://sasha-mean-to-do-joqs9.ondigitalocean.app'; // Use your live URL here
+// const API_URL = 'https://sasha-mean-to-do-joqs9.ondigitalocean.app'; // Use your live URL here
 
 document.getElementById('showLogin').addEventListener('click', () => {
     document.getElementById('loginFormContainer').style.display = 'block';
@@ -25,7 +25,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     }
 
     try {
-        const response = await fetch('${API_URL}/api/register', {
+        const response = await fetch('https://sasha-mean-to-do-joqs9.ondigitalocean.app/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     const password = document.getElementById('loginPassword').value;
 
     try {
-        const response = await fetch('${API_URL}/api/login', {
+        const response = await fetch('https://sasha-mean-to-do-joqs9.ondigitalocean.app/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ document.getElementById('add-task-btn').addEventListener('click', async () => {
     }
 
     try {
-        const response = await fetch('${API_URL}/api/todo', {
+        const response = await fetch('https://sasha-mean-to-do-joqs9.ondigitalocean.app/api/todo', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -134,7 +134,7 @@ async function fetchTasks() {
     console.log('Fetching tasks with token:', token);  // Check if the token is present
 
     try {
-        const response = await fetch('${API_URL}/api/todos', {
+        const response = await fetch('https://sasha-mean-to-do-joqs9.ondigitalocean.app/api/todos', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -190,7 +190,7 @@ async function markTaskComplete(e) {
     const token = localStorage.getItem('token');
     
     try {
-        const response = await fetch(`${API_URL}/api/todo/${taskId}/complete`, {
+        const response = await fetch(`https://sasha-mean-to-do-joqs9.ondigitalocean.app/api/todo/${taskId}/complete`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -229,7 +229,7 @@ async function deleteTask(e) {
     const token = localStorage.getItem('token');
 
     try {
-        const response = await fetch(`${API_URL}/api/todo/${taskId}`, {
+        const response = await fetch(`https://sasha-mean-to-do-joqs9.ondigitalocean.app/api/todo/${taskId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`,
