@@ -1,4 +1,4 @@
-const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000' : 'https://sasha-mean-to-do-joqs9.ondigitalocean.app';
+const API_URL = 'https://sasha-mean-to-do-joqs9.ondigitalocean.app'; // Use your live URL here
 
 document.getElementById('showLogin').addEventListener('click', () => {
     document.getElementById('loginFormContainer').style.display = 'block';
