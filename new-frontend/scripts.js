@@ -1,4 +1,4 @@
-// const API_URL = 'https://sasha-mean-to-do-joqs9.ondigitalocean.app'; // Use your live URL here
+// const API_URL = 'https://sasha-mean-to-do-joqs9.ondigitalocean.app'; 
 
 document.getElementById('showLogin').addEventListener('click', () => {
     document.getElementById('loginFormContainer').style.display = 'block';
